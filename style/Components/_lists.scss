@@ -1,0 +1,10 @@
+.lists{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    &__single{
+        width: 25%;
+    }
+}
