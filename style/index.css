@@ -1,0 +1,209 @@
+:root {
+  /* Primary colors */
+  --softRed: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --darkCyan: hsl(167, 40%, 24%);
+  /* (graphic design text) */
+  --darkBlue: hsl(198, 62%, 26%);
+  /* (photography text) */
+  --moderateCyan: hsl(168, 34%, 41%);
+  /* (footer) */
+  /* Neutral colors */
+  --veryDarkBlue: hsl(212, 27%, 19%);
+  --darkGrayishBlue: hsl(213, 9%, 39%);
+  --darkGrayishBlue: hsl(232, 10%, 55%);
+  --grayishBlue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 15%);
+}
+
+.header__nav {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -ms-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%;
+}
+
+.main {
+  width: 100%;
+}
+
+/* components */
+.header {
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/images/desktop/image-header.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.header__nav {
+  padding: 4rem 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__element {
+  font-family: "Barlow", sans-serif;
+  color: var(--white);
+}
+
+.header__element--logo {
+  font-size: 3.2rem;
+}
+
+.header__menu {
+  list-style: none;
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__menu li:not(:last-of-type) {
+  margin-right: 3.6rem;
+}
+
+.header__menu li:last-of-type a {
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+.header__menu li:last-of-type a:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  color: var(--white);
+}
+
+.header__menu li a {
+  text-decoration: none;
+  color: var(--white);
+  padding: 1.6rem 2.4rem;
+  border-radius: 3.2rem;
+  -webkit-transition: color 200ms ease, background-color 200ms ease;
+  transition: color 200ms ease, background-color 200ms ease;
+}
+
+.header__menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  color: var(--white);
+}
+
+.header__middle {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 4.8rem;
+}
+
+.header__call {
+  color: var(--white);
+  font-family: 'Fraunces', serif;
+  font-size: 4.8rem;
+  letter-spacing: .8rem;
+}
+
+.header__call--arrow {
+  width: 48px;
+  height: 130px;
+  background: url("../../assets/images/icon-arrow-down.svg") center center no-repeat;
+  margin-top: 7rem;
+}
+
+.mosaic {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mosaic__row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.mosaic__col {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mosaic__col__title {
+  font-size: 4.8rem;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  color: var(--veryDarkBlue);
+  border: 1px solid red;
+}
+
+.mosaic__image {
+  width: 100%;
+}
+
+.mosaic__content {
+  width: 100%;
+  max-width: 410px;
+}
+/*# sourceMappingURL=index.css.map */
