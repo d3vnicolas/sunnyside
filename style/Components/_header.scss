@@ -1,0 +1,94 @@
+.header {
+    width: 100%;
+    height: 100vh;
+    // max-height: 700px;
+
+    background: url("../../assets/images/desktop/image-header.jpg") center center no-repeat;
+    background-size: cover;
+
+    &__nav {
+        @extend %container;
+        padding: 4rem 4%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__element {
+        font-family: "Barlow", sans-serif;
+        color: var(--white);
+
+        &--logo {
+            font-size: 3.2rem;
+        }
+    }
+
+    &__menu {
+        list-style: none;
+        font-size: 1.8rem;
+
+        display: flex;
+        align-items: center;
+
+        li {
+            &:not(:last-of-type) {
+                margin-right: 3.6rem;
+            }
+
+            &:last-of-type a {
+                font-family: "Fraunces", serif;
+                text-transform: uppercase;
+                color: var(--black);
+
+                background-color: var(--white);
+
+                &:hover{
+                    background-color: rgba(255, 255, 255, 0.250);
+                    backdrop-filter: blur(10px);
+                    color: var(--white);
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--white);
+
+                padding: 1.6rem 2.4rem;
+                border-radius: 3.2rem;
+                transition: color 200ms ease, background-color 200ms ease;
+
+                &:hover{
+                    background-color: rgba(255, 255, 255, 0.250);
+                    backdrop-filter: blur(10px);
+                    color: var(--white);
+                }
+            }
+        }
+    }
+
+    &__middle{
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        margin-top: 4.8rem;
+    }
+
+    &__call{
+        color: var(--white);
+        font-family: 'Fraunces', serif;
+        font-size: 4.8rem;
+        letter-spacing: .8rem;
+
+        &--arrow{
+            width: 48px;
+            height: 130px;
+            background: url('../../assets/images/icon-arrow-down.svg') center center no-repeat;
+            
+            margin-top: 7rem;
+        }
+    }
+}
