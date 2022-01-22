@@ -18,7 +18,7 @@
 
     &__element {
         font-family: "Barlow", sans-serif;
-        color: var(--white);
+        color: var(--lightText);
 
         &--logo {
             font-size: 3.2rem;
@@ -40,20 +40,20 @@
             &:last-of-type a {
                 font-family: "Fraunces", serif;
                 text-transform: uppercase;
-                color: var(--black);
+                color: var(--darkText);
 
-                background-color: var(--white);
+                background-color: var(--lightText);
 
                 &:hover{
                     background-color: rgba(255, 255, 255, 0.250);
                     backdrop-filter: blur(10px);
-                    color: var(--white);
+                    color: var(--lightText);
                 }
             }
 
             a {
                 text-decoration: none;
-                color: var(--white);
+                color: var(--lightText);
 
                 padding: 1.6rem 2.4rem;
                 border-radius: 3.2rem;
@@ -62,7 +62,7 @@
                 &:hover{
                     background-color: rgba(255, 255, 255, 0.250);
                     backdrop-filter: blur(10px);
-                    color: var(--white);
+                    color: var(--lightText);
                 }
             }
         }
@@ -78,7 +78,7 @@
     }
 
     &__call{
-        color: var(--white);
+        color: var(--lightText);
         font-family: 'Fraunces', serif;
         font-size: 4.8rem;
         letter-spacing: .8rem;
