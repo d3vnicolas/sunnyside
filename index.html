@@ -1,75 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@500;700;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./style/index.css">
   <title>Sunnyside agency landing page</title>
 </head>
+
 <body>
   <header class="header">
-      <div class="header__nav">
-        <h1 class="header__nav__elements header__nav__elements--logo">
-          sunnyside
-        </h1>
-        <nav class="header__nav__elements header__nav__elements--nav">
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header__middle">
-        <h2 class="header__middle__call header__middle__call--title ">
-          WE ARE CREATIVES
-        </h2>
-        <span class="header__middle__call header__middle__call--arrow"></span>
-      </div>
+    <div class="header__nav">
+      <h1 class="header__element header__element--logo">
+        sunnyside
+      </h1>
+      <nav class="header__element">
+        <ul class="header__menu">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__middle">
+      <h2 class="header__call header__call ">
+        WE ARE CREATIVES
+      </h2>
+      <span class="header__call header__call--arrow"></span>
+    </div>
     </div>
   </header>
   <main class="main">
     <section class="mosaic">
       <div class="mosaic__row">
         <div class="mosaic__col">
-          <h2 class="mosaic__title">
-            Transform your brand
-          </h2>
-          <p class="mosaic__paragraph">
-            We are a full-service creative agency specializing in 
-            helping brands grow fast. Engage your clients through
-            compelling visuals that do most of the marketing for you.
-          </p>
-          <a href="#" class="mosaic__button">
-            LEARN MORE
-          </a>
+          <div class="mosaic__content">
+            <h2 class="mosaic__col__title">
+              Transform your brand
+            </h2>
+            <p class="mosaic__col__paragraph">
+              We are a full-service creative agency specializing in
+              helping brands grow fast. Engage your clients through
+              compelling visuals that do most of the marketing for you.
+            </p>
+            <a href="#" class="mosaic__col__button">
+              LEARN MORE
+            </a>
+          </div>
         </div>
         <div class="mosaic__col">
-          <div class="mosaic__image"></div>
-        </div>
-      </div>
-      <div class="mosaic__row">
-        <div class="mosaic__col">
-          <h2 class="mosaic__title">
-            Stand out to the right audience
-          </h2>
-          <p class="mosaic__paragraph">
-            Using a collaborative formula of designers, researchers, 
-            photographers, videographers, and copywriters, we'll build and extend
-            your brand in digital places.
-          </p>
-          <a href="#" class="mosaic__button">
-            LEARN MORE
-          </a>
-        </div>
-        <div class="mosaic__col">
-          <div class="mosaic__image"></div>
+          <img class="mosaic__image" src="./assets/images/desktop/image-transform.jpg" alt="Egg Image">
         </div>
       </div>
       <div class="mosaic__row">
         <div class="mosaic__col">
-          <div class="mosaic__image">
+          <div class="mosaic__content">
+            <h2 class="mosaic__col__title">
+              Stand out to the right audience
+            </h2>
+            <p class="mosaic__col__paragraph">
+              Using a collaborative formula of designers, researchers,
+              photographers, videographers, and copywriters, we'll build and extend
+              your brand in digital places.
+            </p>
+            <a href="#" class="mosaic__col__button">
+              LEARN MORE
+            </a>
+          </div>
+        </div>
+        <div class="mosaic__col">
+          <img class="mosaic__image" src="./assets/images/desktop/image-stand-out.jpg" alt="Image stand out">
+        </div>
+      </div>
+      <div class="mosaic__row">
+        <div class="mosaic__col">
+          <div class="mosaic__background">
+            <img class="mosaic__image" src="./assets/images/desktop/image-graphic-design.jpg" alt="Image cherry">
             <h2 class="mosaic__image__title">
               Graphic Design
             </h2>
@@ -81,7 +97,8 @@
           </div>
         </div>
         <div class="mosaic__col">
-          <div class="mosaic__image">
+          <div class="mosaic__background">
+            <img class="mosaic__image" src="./assets/images/desktop/image-photography.jpg" alt="Image Orange">
             <h2 class="mosaic__image__title">
               Photography
             </h2>
@@ -99,7 +116,7 @@
         <div class="comments__single">
           <img src="/assets/images/image-emily.jpg" alt="profile picture" title="profile picture">
           <p class="comments__single__comment">
-            We our trust in Sunnyside and they delivered, making sure 
+            We our trust in Sunnyside and they delivered, making sure
             our need were met and deadlines were always hit.
           </p>
           <h3 class="comments__single__identifier comments__single__identifier--name">
@@ -140,10 +157,14 @@
       </div>
     </section>
     <section class="lists">
-      <img class="lists__single" src="/assets/images/desktop/image-gallery-milkbottles.jpg" alt="Milk bottles" title="Milk bottles" >
-      <img class="lists__single" src="/assets/images/desktop/image-gallery-orange.jpg" alt="Orange fruit" title="Orange fruit" >
-      <img class="lists__single" src="/assets/images/desktop/image-gallery-cone.jpg" alt="Ice cream cone" title="Ice cream cone" >
-      <img class="lists__single" src="/assets/images/desktop/image-gallery-sugarcubes.jpg" alt="Sugar cubes" title="Sugar cubes" >
+      <img class="lists__single" src="/assets/images/desktop/image-gallery-milkbottles.jpg" alt="Milk bottles"
+        title="Milk bottles">
+      <img class="lists__single" src="/assets/images/desktop/image-gallery-orange.jpg" alt="Orange fruit"
+        title="Orange fruit">
+      <img class="lists__single" src="/assets/images/desktop/image-gallery-cone.jpg" alt="Ice cream cone"
+        title="Ice cream cone">
+      <img class="lists__single" src="/assets/images/desktop/image-gallery-sugarcubes.jpg" alt="Sugar cubes"
+        title="Sugar cubes">
     </section>
   </main>
   <footer class="footer">
@@ -167,4 +188,5 @@
     </nav>
   </footer>
 </body>
+
 </html>
