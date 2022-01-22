@@ -1,0 +1,64 @@
+.comments{
+    @extend %container;
+    padding: 12.8rem 4%;
+
+    text-align: center;
+
+    h2{
+        font-size: 2.4rem;
+        font-family: "Fraunces", serif;
+        color: var(--lightNeutral);
+        letter-spacing: .6rem;
+
+        margin-bottom: 7.2rem;
+    }
+
+    &__wrapper{
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__single{
+        width: 33.3%;
+        
+        img{
+            width: 80px;
+            height:80px;
+            border-radius: 50%;
+
+            margin-bottom: 4rem;
+        }
+
+        &__comment{
+            font-size: 1.8rem;
+            font-family: "Barlow", sans-serif;
+            line-height: 2.8rem;
+            
+            color: var(--darkNeutral);
+            
+            padding: 0 3.2rem;
+            margin-bottom: 6.4rem;
+        }
+
+        &__identifier{
+            &--name{
+                font-size: 2rem;
+                color: var(--veryDarkNeutral);
+                font-family: "Fraunces", serif;
+
+                margin-bottom: .8rem;
+            }
+
+            &--occupation{
+                color: var(--lightNeutral);
+                font-family: "Barlow", sans-serif;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

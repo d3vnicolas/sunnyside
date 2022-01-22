@@ -17,7 +17,7 @@
   --darkText: hsl(0, 0%, 15%);
 }
 
-.header__nav {
+.header__nav, .comments {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
@@ -312,5 +312,68 @@ body, html {
   width: 100%;
   max-width: 380px;
   text-align: center;
+}
+
+.comments {
+  padding: 12.8rem 4%;
+  text-align: center;
+}
+
+.comments h2 {
+  font-size: 2.4rem;
+  font-family: "Fraunces", serif;
+  color: var(--lightNeutral);
+  letter-spacing: .6rem;
+  margin-bottom: 7.2rem;
+}
+
+.comments__wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comments__single {
+  width: 33.3%;
+}
+
+.comments__single img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 4rem;
+}
+
+.comments__single__comment {
+  font-size: 1.8rem;
+  font-family: "Barlow", sans-serif;
+  line-height: 2.8rem;
+  color: var(--darkNeutral);
+  padding: 0 3.2rem;
+  margin-bottom: 6.4rem;
+}
+
+.comments__single__identifier--name {
+  font-size: 2rem;
+  color: var(--veryDarkNeutral);
+  font-family: "Fraunces", serif;
+  margin-bottom: .8rem;
+}
+
+.comments__single__identifier--occupation {
+  color: var(--lightNeutral);
+  font-family: "Barlow", sans-serif;
+  font-size: 1.6rem;
 }
 /*# sourceMappingURL=index.css.map */
