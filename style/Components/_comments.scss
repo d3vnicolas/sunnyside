@@ -25,13 +25,18 @@
 
     &__single{
         width: 33.3%;
-        
+        height: 36rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
         img{
             width: 80px;
             height:80px;
             border-radius: 50%;
 
-            margin-bottom: 4rem;
         }
 
         &__comment{
@@ -42,7 +47,6 @@
             color: var(--darkNeutral);
             
             padding: 0 3.2rem;
-            margin-bottom: 6.4rem;
         }
 
         &__identifier{
