@@ -5,8 +5,9 @@
 
     background: url("../../assets/images/desktop/image-header.jpg") center center no-repeat;
     background-size: cover;
+    overflow: hidden;
 
-    &__nav {
+    &__head {
         @extend %container;
         padding: 4rem 4%;
 
@@ -14,6 +15,84 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+
+        position: relative;
+    }
+
+    // menu mobile
+    &__mobile {
+        &__icon{
+            width: 3.2rem;
+            height: 3.2rem;
+            background: url('../../assets/images/icon-hamburger.svg') center center no-repeat;
+
+            position: absolute;
+            top: 4.7rem;
+            right: 4%;
+
+            cursor: pointer;
+        }
+
+        &__menu {
+            position: absolute;
+            top: 14rem;
+            left: 100%;
+            transition: left 300ms linear;
+            width: 92%;
+            padding: 4rem;
+
+            list-style: none;
+            background-color: var(--lightText);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            font-size: 2rem;
+
+            &::after {
+                position: absolute;
+                top: -16px;
+                right: -16px;
+
+                content: "";
+                width: 0;
+                height: 0;
+                border-left: 3.2rem solid transparent;
+                border-right: 3.2rem solid transparent;
+                border-bottom: 3.2rem solid var(--lightText);
+                transform: rotateZ(-90deg);
+            }
+
+            li {
+                font-family: "Fraunces", serif;
+                font-weight: 600;
+                a {
+                    text-decoration: none;
+                    color: var(--softNeutral);
+
+                    padding: 1.4rem 2.6rem;
+                    border-radius: 3rem;
+                }
+
+                &:not(:last-of-type) {
+                    margin-bottom: 5rem;
+                    font-family: "Barlow", sans-serif;
+                    font-weight: 500;
+                }
+
+                //last button
+                &:last-of-type a {
+                    text-transform: uppercase;
+                    font-size: 1.8rem;
+                    color: var(--darkText);
+
+                    background-color: var(--accentPrimary);
+                    filter: brightness(105%);
+                    padding: 1.8rem 3.2rem;
+                }
+            }
+        }
     }
 
     &__element {
@@ -44,8 +123,8 @@
 
                 background-color: var(--lightText);
 
-                &:hover{
-                    background-color: rgba(255, 255, 255, 0.250);
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.25);
                     backdrop-filter: blur(10px);
                     color: var(--lightText);
                 }
@@ -59,8 +138,8 @@
                 border-radius: 3.2rem;
                 transition: color 200ms ease, background-color 200ms ease;
 
-                &:hover{
-                    background-color: rgba(255, 255, 255, 0.250);
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.25);
                     backdrop-filter: blur(10px);
                     color: var(--lightText);
                 }
@@ -68,26 +147,26 @@
         }
     }
 
-    &__middle{
+    &__middle {
         width: 100%;
 
         display: flex;
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
         margin-top: 4.8rem;
     }
 
-    &__call{
+    &__call {
         color: var(--lightText);
-        font-family: 'Fraunces', serif;
+        font-family: "Fraunces", serif;
         font-size: 4.8rem;
-        letter-spacing: .8rem;
+        letter-spacing: 0.8rem;
 
-        &--arrow{
+        &--arrow {
             width: 48px;
             height: 130px;
-            background: url('../../assets/images/icon-arrow-down.svg') center center no-repeat;
-            
+            background: url("../../assets/images/icon-arrow-down.svg") center center no-repeat;
+
             margin-top: 7rem;
         }
     }

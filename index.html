@@ -8,21 +8,32 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;800&family=Fraunces:wght@500;700;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;800&family=Fraunces:wght@500;700;900&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="./style/index.css">
   <title>Sunnyside agency landing page</title>
+
 </head>
 
 <body>
   <header class="header">
-    <div class="header__nav">
+    <div class="header__head">
       <h1 class="header__element header__element--logo">
         sunnyside
       </h1>
-      <nav class="header__element">
+      <nav class="header__element mobile-hidden">
         <ul class="header__menu">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="header__mobile desktop-hidden">
+        <span onclick="handleNavMobile()" class="header__mobile__icon"></span>
+        <ul class="header__mobile__menu">
           <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">Projects</a></li>
@@ -90,7 +101,7 @@
             <h2 class="mosaic__image__title">
               Graphic Design
             </h2>
-            <p class="mosaic__image__paraghraph">
+            <p class="mosaic__image__paragraph">
               Great design makes you memorable. We deliver artwork
               that underscores your brand message and captures potential
               client's attention.
@@ -104,7 +115,7 @@
             <h2 class="mosaic__image__title">
               Photography
             </h2>
-            <p class="mosaic__image__paraghraph">
+            <p class="mosaic__image__paragraph">
               Increase your credibility by getting the most stunning,
               high-quiality photos that improve your business image.
             </p>
@@ -121,12 +132,14 @@
             We our trust in Sunnyside and they delivered, making sure
             our need were met and deadlines were always hit.
           </p>
-          <h3 class="comments__single__identifier comments__single__identifier--name">
-            Emily R.
-          </h3>
-          <span class="comments__single__identifier comments__single__identifier--occupation">
-            Marketing Director
-          </span>
+          <div class="comments__single__occupation">
+            <h3 class="comments__single__identifier comments__single__identifier--name">
+              Emily R.
+            </h3>
+            <span class="comments__single__identifier comments__single__identifier--occupation">
+              Marketing Director
+            </span>
+          </div>
         </div>
 
         <div class="comments__single">
@@ -135,12 +148,14 @@
             Sunnyside's enthusiasm coupled with their keen interest in our
             brand's success made it a satisfying and enjoyable experience.
           </p>
-          <h3 class="comments__single__identifier comments__single__identifier--name">
-            Thomas S.
-          </h3>
-          <span class="comments__single__identifier comments__single__identifier--occupation">
-            Chief Operating Officer
-          </span>
+          <div class="comments__single__occupation">
+            <h3 class="comments__single__identifier comments__single__identifier--name">
+              Thomas S.
+            </h3>
+            <span class="comments__single__identifier comments__single__identifier--occupation">
+              Chief Operating Officer
+            </span>
+          </div>
         </div>
 
         <div class="comments__single">
@@ -149,12 +164,14 @@
             Incredible end result! Our sales increased over 400% when
             we worked with Sunnyside. Highly recommend!
           </p>
-          <h3 class="comments__single__identifier comments__single__identifier--name">
-            Jennie F.
-          </h3>
-          <span class="comments__single__identifier comments__single__identifier--occupation">
-            Business Owner
-          </span>
+          <div class="comments__single__occupation">
+            <h3 class="comments__single__identifier comments__single__identifier--name">
+              Jennie F.
+            </h3>
+            <span class="comments__single__identifier comments__single__identifier--occupation">
+              Business Owner
+            </span>
+          </div>
         </div>
       </div>
     </section>
@@ -192,5 +209,13 @@
     </div>
   </footer>
 </body>
+<script>
+  const nav = document.querySelector(".header__mobile__menu");
+  let handleMenu = true;
+  const handleNavMobile = () => {
+    handleMenu ? nav.style.left = '4%' : nav.style.left = '100%';
+    handleMenu ? handleMenu = false : handleMenu = true;
+  }
+</script>
 
 </html>
