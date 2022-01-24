@@ -1,0 +1,66 @@
+$desktopMedium: 1024px;
+$mobileLarge: 768px;
+$mobileMedium: 580px;
+$mobileSmall: 320px;
+
+@media (max-width: $desktopMedium){
+    // mosaic
+    .mosaic{
+        &__col{
+            &__title{
+                font-size: 3.2rem;
+            }
+
+            &__paragraph{
+                font-size: 1.6rem;
+            }
+
+            &__button{
+                font-size: 1.6rem;
+            }
+        }
+
+        &__content{
+            max-width: 430px;
+        }
+
+        //last row
+        &__row:last-of-type > .mosaic__col{
+            .mosaic__image{
+                &__title {
+                    font-size: 3rem;
+                    margin-bottom: 2rem;
+                }
+
+                &__paragraph{
+                    font-size: 1.4rem;
+                }
+            }
+
+            .mosaic__wrapper__content{
+                top: 55%;
+            }
+        } 
+    }
+}
+
+@media (max-width: $mobileLarge){
+    
+}
+
+
+
+
+
+//Config classes
+@media (max-width: $mobileLarge){
+    .mobile-hidden{
+        display: none;
+    }
+}
+
+@media (min-width: 769px){
+    .desktop-hidden{
+        display: none;
+    }
+}
