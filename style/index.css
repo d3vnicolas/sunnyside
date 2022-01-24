@@ -6,8 +6,9 @@
   /* (graphic design text) */
   --photoText: hsl(198, 62%, 26%);
   /* (photography text) */
-  --footerText: hsl(168, 34%, 41%);
+  --footerText: hsl(168, 35%, 31%);
   /* (footer) */
+  --footerBack: hsl(167, 44%, 70%);
   /* Neutral colors */
   --veryDarkNeutral: hsl(212, 27%, 19%);
   --darkNeutral: hsl(213, 9%, 39%);
@@ -17,7 +18,7 @@
   --darkText: hsl(0, 0%, 15%);
 }
 
-.header__nav, .comments {
+.header__nav, .comments, .footer__content {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
@@ -390,5 +391,90 @@ body, html {
 
 .lists__single {
   width: 25%;
+}
+
+.footer {
+  padding: 5rem 4%;
+  background-color: var(--footerBack);
+}
+
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__title {
+  font-family: "Barlow", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--footerText);
+  margin-bottom: 3.2rem;
+}
+
+.footer__nav {
+  width: 100%;
+}
+
+.footer__nav ul {
+  width: 100%;
+  list-style: none;
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__nav ul li a {
+  text-decoration: none;
+  color: var(--footerText);
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+  padding: 0.4rem 0.8rem;
+}
+
+.footer__nav ul li a:hover {
+  color: var(--lightText);
+}
+
+.footer__nav--menu {
+  max-width: 30rem;
+  margin-bottom: 5.6rem;
+}
+
+.footer__nav--social {
+  max-width: 18rem;
+}
+
+.footer__nav--social ul > li > a > img {
+  -webkit-transition: -webkit-filter 200ms ease;
+  transition: -webkit-filter 200ms ease;
+  transition: filter 200ms ease;
+  transition: filter 200ms ease, -webkit-filter 200ms ease;
+}
+
+.footer__nav--social ul > li > a:hover > img {
+  -webkit-filter: brightness(600%);
+          filter: brightness(600%);
 }
 /*# sourceMappingURL=index.css.map */

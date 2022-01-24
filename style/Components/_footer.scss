@@ -1,0 +1,68 @@
+.footer {
+    padding: 5rem 4%;
+
+    background-color: var(--footerBack);
+
+    &__content {
+        @extend %container;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        font-family: "Barlow", sans-serif;
+        font-size: 3.2rem;
+        font-weight: 800;
+        color: var(--footerText);
+        margin-bottom: 3.2rem;
+    }
+
+    &__nav {
+        width: 100%;
+
+        ul {
+            width: 100%;
+
+            list-style: none;
+
+            font-size: 1.8rem;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            li a {
+                text-decoration: none;
+                color: var(--footerText);
+                transition: color 200ms ease;
+
+                padding: 0.4rem 0.8rem;
+
+                &:hover {
+                    color: var(--lightText);
+                }
+            }
+        }
+
+        &--menu {
+            max-width: 30rem;
+            margin-bottom: 5.6rem;
+        }
+
+        &--social {
+            max-width: 18rem;
+
+            ul > li > a > img {
+                transition: filter 200ms ease;
+            }
+
+            ul > li > a:hover > img {
+                filter: brightness(600%);
+            }
+        }
+    }
+}
