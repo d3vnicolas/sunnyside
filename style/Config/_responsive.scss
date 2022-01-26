@@ -3,64 +3,153 @@ $mobileLarge: 768px;
 $mobileMedium: 580px;
 $mobileSmall: 320px;
 
-@media (max-width: $desktopMedium){
+@media (max-width: $desktopMedium) {
     // mosaic
-    .mosaic{
-        &__col{
-            &__title{
+    .mosaic {
+        &__col {
+            &__title {
                 font-size: 3.2rem;
             }
 
-            &__paragraph{
+            &__paragraph {
                 font-size: 1.6rem;
             }
 
-            &__button{
+            &__button {
                 font-size: 1.6rem;
             }
         }
 
-        &__content{
+        &__content {
             max-width: 430px;
         }
 
         //last row
-        &__row:last-of-type > .mosaic__col{
-            .mosaic__image{
+        &__row:last-of-type > .mosaic__col {
+            .mosaic__image {
                 &__title {
                     font-size: 3rem;
-                    margin-bottom: 2rem;
+                    margin-bottom: 0.8rem;
                 }
 
-                &__paragraph{
-                    font-size: 1.4rem;
+                &__paragraph {
+                    font-size: 1.6rem;
                 }
             }
 
-            .mosaic__wrapper__content{
+            .mosaic__wrapper__content {
                 top: 55%;
             }
-        } 
+        }
+    }
+
+    .comments {
+        &__single {
+            height: 30rem;
+
+            &__comment {
+                font-size: 1.4rem;
+            }
+        }
     }
 }
 
-@media (max-width: $mobileLarge){
-    
+@media (max-width: $mobileLarge) {
+    .mosaic {
+        &__row {
+            text-align: center;
+
+            &:not(:last-of-type) {
+                flex-direction: column-reverse;
+                .mosaic__col:nth-child(2n + 1) {
+                    padding: 20% 0;
+                }
+            }
+
+            &:last-of-type {
+                flex-direction: column;
+            }
+        }
+
+        &__col {
+            width: 100%;
+        }
+    }
+    .header {
+        &__middle {
+            text-align: center;
+        }
+        &__call {
+            max-width: 400px;
+        }
+    }
+
+    .comments {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__single {
+            max-height: 24rem;
+
+            &:not(:last-of-type) {
+                margin-bottom: 8rem;
+            }
+
+            &__comment {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    .lists {
+        flex-wrap: wrap;
+
+        &__single {
+            width: 50%;
+        }
+    }
 }
 
+@media (max-width: $mobileMedium) {
+    .header {
+        &__call {
+            font-size: 3.2rem;
+            max-width: 300px;
+        }
+    }
 
+    .mosaic__row:last-of-type {
+        .mosaic {
+            &__col {
+                min-height: 4rem;
+                overflow: hidden;
 
+                img {
+                    width: unset;
+                    height: 100%;
+                }
+            }
 
+            &__wrapper__content {
+                padding: 0 4%;
+            }
+        }
+    }
+
+    .comments h2{
+        font-size: 1.6rem;
+    }
+}
 
 //Config classes
-@media (max-width: $mobileLarge){
-    .mobile-hidden{
+@media (max-width: $mobileLarge) {
+    .mobile-hidden {
         display: none;
     }
 }
 
-@media (min-width: 769px){
-    .desktop-hidden{
+@media (min-width: 769px) {
+    .desktop-hidden {
         display: none;
     }
 }

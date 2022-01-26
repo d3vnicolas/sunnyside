@@ -1,7 +1,7 @@
 .header {
     width: 100%;
     height: 100vh;
-    // max-height: 700px;
+    max-height: 900px;
 
     background: url("../../assets/images/desktop/image-header.jpg") center center no-repeat;
     background-size: cover;
@@ -14,7 +14,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: baseline;
 
         position: relative;
     }
@@ -102,20 +102,21 @@
         &--logo {
             font-size: 3.2rem;
         }
+
+        &--menu{
+            width: 500px;
+        }
     }
 
     &__menu {
+        width: 100%;
         list-style: none;
         font-size: 1.8rem;
 
         display: flex;
-        align-items: center;
+        justify-content: space-between;
 
         li {
-            &:not(:last-of-type) {
-                margin-right: 3.6rem;
-            }
-
             &:last-of-type a {
                 font-family: "Fraunces", serif;
                 text-transform: uppercase;
@@ -161,6 +162,7 @@
         font-family: "Fraunces", serif;
         font-size: 4.8rem;
         letter-spacing: 0.8rem;
+        
 
         &--arrow {
             width: 48px;
