@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
       <h1 class="header__element header__element--logo">
         sunnyside
       </h1>
-      <nav class="header__element header__element--menu mobile-hidden">
+      <nav class="header__element header__element--menu mobile-hidden" aria-label="desktop">
         <ul class="header__menu">
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
@@ -32,7 +32,7 @@
         </ul>
       </nav>
 
-      <nav class="header__mobile desktop-hidden">
+      <nav class="header__mobile desktop-hidden" aria-label="mobile">
         <!-- hamgurbuer icon -->
         <div class="hamburguer">
           <label for="hamburguer" onclick="handleNavMobile(this)"></label>
