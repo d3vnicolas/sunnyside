@@ -12,6 +12,7 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="./style/index.css">
+  <link rel="stylesheet" href="./style/Components/hamburguer.css">
   <title>Sunnyside agency landing page</title>
 
 </head>
@@ -24,25 +25,32 @@
       </h1>
       <nav class="header__element header__element--menu mobile-hidden">
         <ul class="header__menu">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
       <nav class="header__mobile desktop-hidden">
-        <span onclick="handleNavMobile()" class="header__mobile__icon"></span>
+        <!-- hamgurbuer icon -->
+        <div class="hamburguer">
+          <label for="hamburguer" onclick="handleNavMobile(this)"></label>
+          <input type="checkbox" id="hamburguer">
+
+          <span class="bars"></span>
+        </div>
+        <!-- hamgurbuer icon -->
         <ul class="header__mobile__menu">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#about" onclick="handleNavMobile()">About</a></li>
+          <li><a href="#services" onclick="handleNavMobile()">Services</a></li>
+          <li><a href="#projects" onclick="handleNavMobile()">Projects</a></li>
+          <li><a href="#contact" onclick="handleNavMobile()">Contact</a></li>
         </ul>
       </nav>
     </div>
     <div class="header__middle">
-      <h2 class="header__call header__call ">
+      <h2 class="header__call header__call">
         WE ARE CREATIVES
       </h2>
       <span class="header__call header__call--arrow"></span>
@@ -210,12 +218,25 @@
   </footer>
 </body>
 <script>
-  const nav = document.querySelector(".header__mobile__menu");
-  let handleMenu = true;
-  const handleNavMobile = () => {
-    handleMenu ? nav.style.left = '4%' : nav.style.left = '100%';
-    handleMenu ? handleMenu = false : handleMenu = true;
+  // algoritmo do botão menu mobile
+  var handleMenu = true;
+  const handleNavMobile = (e) => {
+    const nav = document.querySelector(".header__mobile__menu");
+    const bars = document.querySelectorAll("[for='hamburguer']")[0];
+
+    if (e) {
+      if (handleMenu) {
+        nav.style.left = '4%';
+        handleMenu = false;
+      } else {
+        nav.style.left = '100%';
+        handleMenu = true;
+      }
+    }else{
+      bars.click();
+    }
   }
+  // ----------------------------------------
 </script>
 
 </html>

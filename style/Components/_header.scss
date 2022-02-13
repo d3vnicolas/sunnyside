@@ -2,6 +2,7 @@
     width: 100%;
     height: 100vh;
     max-height: 900px;
+    min-height: 480px;
 
     background: url("../../assets/images/desktop/image-header.jpg") center center no-repeat;
     background-size: cover;
@@ -14,30 +15,19 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: center;
 
         position: relative;
     }
 
     // menu mobile
     &__mobile {
-        &__icon{
-            width: 3.2rem;
-            height: 3.2rem;
-            background: url('../../assets/images/icon-hamburger.svg') center center no-repeat;
-
-            position: absolute;
-            top: 4.7rem;
-            right: 4%;
-
-            cursor: pointer;
-        }
 
         &__menu {
             position: absolute;
             top: 14rem;
             left: 100%;
-            transition: left 300ms linear;
+            transition: left 500ms linear;
             width: 92%;
             padding: 4rem;
 

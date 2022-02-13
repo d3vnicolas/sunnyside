@@ -45,10 +45,11 @@ $mobileSmall: 320px;
 
     .comments {
         &__single {
-            height: 30rem;
+            height: auto;
 
             &__comment {
                 font-size: 1.4rem;
+                margin: 2.4rem 0;
             }
         }
     }
@@ -89,10 +90,8 @@ $mobileSmall: 320px;
             flex-direction: column;
         }
         &__single {
-            max-height: 24rem;
-
             &:not(:last-of-type) {
-                margin-bottom: 8rem;
+                margin-bottom: 12.8rem;
             }
 
             &__comment {

@@ -49,6 +49,7 @@ body, html {
   width: 100%;
   height: 100vh;
   max-height: 900px;
+  min-height: 480px;
   background: url("../../assets/images/desktop/image-header.jpg") center center no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -66,28 +67,18 @@ body, html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
-}
-
-.header__mobile__icon {
-  width: 3.2rem;
-  height: 3.2rem;
-  background: url("../../assets/images/icon-hamburger.svg") center center no-repeat;
-  position: absolute;
-  top: 4.7rem;
-  right: 4%;
-  cursor: pointer;
 }
 
 .header__mobile__menu {
   position: absolute;
   top: 14rem;
   left: 100%;
-  -webkit-transition: left 300ms linear;
-  transition: left 300ms linear;
+  -webkit-transition: left 500ms linear;
+  transition: left 500ms linear;
   width: 92%;
   padding: 4rem;
   list-style: none;
@@ -593,10 +584,11 @@ body, html {
     top: 55%;
   }
   .comments__single {
-    height: 30rem;
+    height: auto;
   }
   .comments__single__comment {
     font-size: 1.4rem;
+    margin: 2.4rem 0;
   }
 }
 
@@ -634,11 +626,8 @@ body, html {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .comments__single {
-    max-height: 24rem;
-  }
   .comments__single:not(:last-of-type) {
-    margin-bottom: 8rem;
+    margin-bottom: 12.8rem;
   }
   .comments__single__comment {
     font-size: 1.6rem;
